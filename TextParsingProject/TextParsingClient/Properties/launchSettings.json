@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TextParsingClient": {
+      "commandName": "Project",
+      "commandLineArgs": "F"
+    }
+  }
+}

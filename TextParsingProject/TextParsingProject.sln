@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextParsingServer", "TextParsingServer\TextParsingServer.csproj", "{3BBD09F8-8D82-4F75-9185-1A03BA374B47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsingClient", "TextParsingClient\TextParsingClient.csproj", "{B6A00B81-B477-4D0A-B893-F5AD74641A90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextParsingClient", "TextParsingClient\TextParsingClient.csproj", "{B6A00B81-B477-4D0A-B893-F5AD74641A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsingServer.Services", "TextParsingServer.Servces\TextParsingServer.Services.csproj", "{E5DD46B4-4B98-43F8-94ED-26AE95EBEEA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsingServer.API", "TextParsingServer.API\TextParsingServer.API.csproj", "{F666738F-685D-4CE6-AF68-ABFC1E41B781}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{8880987E-8254-44EE-BFEA-098FA524DF0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextParsing.DB", "DAL\TextParsing.DB.csproj", "{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3BBD09F8-8D82-4F75-9185-1A03BA374B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BBD09F8-8D82-4F75-9185-1A03BA374B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BBD09F8-8D82-4F75-9185-1A03BA374B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BBD09F8-8D82-4F75-9185-1A03BA374B47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B6A00B81-B477-4D0A-B893-F5AD74641A90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6A00B81-B477-4D0A-B893-F5AD74641A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A00B81-B477-4D0A-B893-F5AD74641A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A00B81-B477-4D0A-B893-F5AD74641A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DD46B4-4B98-43F8-94ED-26AE95EBEEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DD46B4-4B98-43F8-94ED-26AE95EBEEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DD46B4-4B98-43F8-94ED-26AE95EBEEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DD46B4-4B98-43F8-94ED-26AE95EBEEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,9 @@
+obj
+TextParsingProject/TextParsingClient/bin/
+TextParsingProject/DAL/bin/Debug/net5.0/appsettings.json
+TextParsingProject/TextParsingServer.API/bin/Debug/net5.0/TextParsingServer.API.dll
+TextParsingProject/TextParsingServer.Servces/bin/
+TextParsingProject/TextParsingServer.API/bin/
+TextParsingProject/WebApplication1/
+TextParsingProject/DAL/bin/
+TextParsingProject/.vs/
