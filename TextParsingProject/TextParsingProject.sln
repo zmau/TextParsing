@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsingServer.API", "Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{8880987E-8254-44EE-BFEA-098FA524DF0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextParsing.DB", "DAL\TextParsing.DB.csproj", "{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsing.DB", "DAL\TextParsing.DB.csproj", "{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

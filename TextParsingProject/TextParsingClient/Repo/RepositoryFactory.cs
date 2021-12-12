@@ -8,12 +8,10 @@ namespace TextParsingClient.Repo
         {
             switch (mode)
             {
-                case InputMode.FILE:
-                    return new FileRepository();
-                case InputMode.CONSOLE:
-                    return new ConsoleRepository();
-                default:
-                    return new FileRepository();
+                case InputMode.FILE: return new FileRepository();
+                case InputMode.CONSOLE: return new ConsoleRepository();
+                case InputMode.DATABASE: return new DbRepository();
+                default: return new FileRepository(); // throw exception
             }
         }
     }
