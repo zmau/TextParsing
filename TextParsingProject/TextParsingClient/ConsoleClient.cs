@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using TextParsingClient.Repo;
+
+using System.Net;
 
 namespace TextParsingClient
 {
@@ -26,53 +26,23 @@ namespace TextParsingClient
             _mode = inputMode;
             _httpClient = new HttpClient();
         }
-        public async void process()
+        public async Task process()
         {
             ITextRepository repository = RepositoryFactory.NewRepository(_mode);
             string text = repository.GetText();
             Console.WriteLine("input text : " + text);
-            //await CountWords(text);
-            await PostRequest(text);
-
+            int result = await CountWordsAsync(text);
+            Console.WriteLine(string.Format("text : {0} ", text));
+            Console.WriteLine(string.Format("Words count : {0}", result));
+            Console.WriteLine();
         }
 
-        private async Task PostRequest(string text)
+        private async Task<int> CountWordsAsync(string text)
         {
-            try
-            {
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri(API_URL);
-                    var content = new FormUrlEncodedContent(new[]
-                    {
-                        new KeyValuePair<string, string>("text", text)
-                    });
-                    var result = await client.PostAsync("/wordcounter/GetWordCountByPost", content);
-                    string resultContent = await result.Content.ReadAsStringAsync();
-                    Console.WriteLine(resultContent);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        private async Task CountWords(string text)
-        {
-            try
-            {
-                _httpClient.DefaultRequestHeaders.Accept.Clear();
-                _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-                string wholeUrl = string.Format("{0}/gettext/{1}", API_URL, text);
-                var stringTask = _httpClient.GetStringAsync(wholeUrl); 
-
-                var msg = await stringTask;
-                Console.Write(msg);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            string wholeUrl = string.Format("{0}/wordcounter/{1}", API_URL, text);
+            var client = new WebClient();
+            var response = await client.DownloadStringTaskAsync(new Uri(wholeUrl));
+            return Convert.ToInt32(response);
         }
     }
 }

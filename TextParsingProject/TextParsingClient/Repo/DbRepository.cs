@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using TextParsingClient.DB;
 
 namespace TextParsingClient.Repo
@@ -9,9 +7,9 @@ namespace TextParsingClient.Repo
     {
         public string GetText()
         {
-            string CONN_STRING = "Data Source=.;Initial Catalog=orion3;Integrated Security=True";
+            string CONN_STRING = "Data Source=.;Initial Catalog=orion;Integrated Security=True";
             ParsingDBContext context = new ParsingDBContext(CONN_STRING);
-            var input = context.InputText.Where(input => input.ID == 2);
+            var input = context.InputText.Where(input => input.ID == 3);
             return input.First().Text;
         }
 

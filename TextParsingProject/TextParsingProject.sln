@@ -9,10 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsingServer.Services"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsingServer.API", "TextParsingServer.API\TextParsingServer.API.csproj", "{F666738F-685D-4CE6-AF68-ABFC1E41B781}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{8880987E-8254-44EE-BFEA-098FA524DF0B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextParsing.DB", "DAL\TextParsing.DB.csproj", "{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +27,6 @@ Global
 		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F666738F-685D-4CE6-AF68-ABFC1E41B781}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8880987E-8254-44EE-BFEA-098FA524DF0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D8241E0-8C3D-44C2-ADE7-C73B6E3B58BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

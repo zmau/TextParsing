@@ -14,8 +14,9 @@ public class Program
 
             if (validateInput(args))
             {
+                Console.WriteLine(string.Format("Reading from {0}", _inputMode));
                 ConsoleClient consoleClient = new ConsoleClient(_inputMode);
-                consoleClient.process();
+                await consoleClient.process();
             }
             else
                 Console.WriteLine("Wrong argument");
