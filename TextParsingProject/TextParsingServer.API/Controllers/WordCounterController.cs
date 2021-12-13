@@ -23,12 +23,5 @@ namespace TextParsingServer.API.Controllers
         {
             return _service.getWordsCount(text); 
         }
-
-        [HttpPost("text")]
-//        [Route("WordCounter/GetWordCountByPost/{text}")]
-        public int GetWordCountByPost([FromBody] string text)
-        {
-            return _service.getWordsCount(text);
-        }
     }
 }

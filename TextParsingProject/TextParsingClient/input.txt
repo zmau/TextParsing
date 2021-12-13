@@ -1,1 +1,1 @@
-four words input text
+six words input text from file

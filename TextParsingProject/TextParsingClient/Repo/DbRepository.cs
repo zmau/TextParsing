@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using Microsoft.Extensions.Configuration;
 using TextParsingClient.DB;
 
 namespace TextParsingClient.Repo
@@ -7,10 +7,10 @@ namespace TextParsingClient.Repo
     {
         public string GetText()
         {
-            string CONN_STRING = "Data Source=.;Initial Catalog=orion;Integrated Security=True";
-            ParsingDBContext context = new ParsingDBContext(CONN_STRING);
-            var input = context.InputText.Where(input => input.ID == 3);
-            return input.First().Text;
+            string connectionString = ConfigurationFactory.GetConfiguration().GetConnectionString("orionDB");
+            ParsingDBContext context = new ParsingDBContext(connectionString);
+            var input = context.InputText.Find(3); // sync call, because of interface!
+            return input.Text;
         }
 
     }

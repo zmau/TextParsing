@@ -11,7 +11,7 @@ namespace TextParsingClient.Repo
                 case InputMode.FILE: return new FileRepository();
                 case InputMode.CONSOLE: return new ConsoleRepository();
                 case InputMode.DATABASE: return new DbRepository();
-                default: return new FileRepository(); // throw exception
+                default: return new FileRepository(); // TODO throw exception instead of setting default!
             }
         }
     }

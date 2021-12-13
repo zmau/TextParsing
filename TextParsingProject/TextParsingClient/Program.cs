@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
 
 namespace TextParsingClient
 {
-public class Program
-{
-        private static ConsoleClient.InputMode _inputMode = ConsoleClient.InputMode.DATABASE; // default mode
+    public class Program
+    {
+        private static ConsoleClient.InputMode _inputMode = ConsoleClient.InputMode.FILE; // default mode
         static async Task Main(string[] args)
         {
 
@@ -19,9 +16,12 @@ public class Program
                 await consoleClient.process();
             }
             else
-                Console.WriteLine("Wrong argument");
+                Console.WriteLine("Wrong argument. Expected values are F (file), C (console) and DB (database).");
         }
 
+        /**
+          *    Checks if passed arguments are correct
+          */
         private static bool validateInput(string[] args)
         {
             bool inputCorrect = true;
@@ -37,6 +37,7 @@ public class Program
                         break;
                 }
             }
+            else inputCorrect = false;
             // ignoring second and all next arguments
             return inputCorrect;
         }
