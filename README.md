@@ -1,5 +1,5 @@
 Prerequest : there should be MS SQL server instance up and running on localhost. If SQL server is on some other machine,
-please configure orionDB configuration property in file appsettings.json .
+please configure orionDB configuration property in file appsettings.json in TextParsingClient.
 
 1. Start REST server application TextParsingServer.API. Browser will also start, pass test data to server, and show resulting integer.
 Check value apiUrl in config file appsettings.json, make sure the port is the same as in browser.
